@@ -1,0 +1,38 @@
+<div>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+        <span class="navbar-brand">Welcome</span>
+	  <div class="nav navbar-nav navbar-right">
+		<li class="nav-item" style="font-size: large;letter-spacing: 1px;">
+		  <a routerLink="/home" class="nav-link">Home</a>
+		</li>
+		
+    <li class="nav-item" >
+		  <a routerLink="/userinfo" class="nav-link">
+            <i class="fa fa-user-circle fa-3x" style=  "position: absolute;
+            right: 0;top: 0;" ></i>
+			
+		  </a>
+		</li>
+		
+		
+	  </div>
+	</nav>
+	</div>
+  	
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="text-info p-5" *ngIf = "authservice.currentUser">
+            <h2 class="alldata">
+                user information
+            </h2>
+            <h4><b>User ID:</b>{{authservice.currentUserId}}</h4>
+            <h4><b>User email:</b>{{authservice.currentUserName}}</h4>
+            <button class="btn-danger" (click)="authservice.singout()">Logout</button>
+            
+        </div>
+    </div>
+</div>
+ 
+<router-outlet></router-outlet>
+
+

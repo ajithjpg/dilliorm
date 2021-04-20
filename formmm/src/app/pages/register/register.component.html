@@ -1,0 +1,59 @@
+<div>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+        <span class="navbar-brand">Welcome</span>
+	  <div class="nav navbar-nav navbar-right" style=  "position: absolute;
+      right: 0;top: 0;">
+		
+            <li class="nav-item" style="font-size: large;letter-spacing: 1px;">
+              <a routerLink="/register" class="nav-link"> Register</a>
+             
+            </li>
+            
+        <li class="nav-item" style="letter-spacing: 1px;" >
+              <a routerLink="/login" class="nav-link">
+              
+                LogIn
+              </a>
+            </li>
+            
+            
+          
+		
+		
+	  </div>
+	</nav>
+	</div>
+
+<div class="container">
+    <div class="row justify-content-center p-4">
+      
+        
+        <div class="col-md-6">
+            <form (ngSubmit)="register()">
+            <h3> Register</h3>
+            <div class="form-group p-2">
+                <input type="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Enter email Id" required>
+            </div>
+            <div class="form-group p-2">
+                <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Enter Password"
+                    required>
+            </div>
+            <div class="form-group p-2">
+                <button type="submit" class="btn btn-primary">Register</button>
+                <div class="register"><a href="#" routerLink="/login">Back To Login</a></div>
+            </div>
+            </form>
+            <div class="form-group">
+                <p *ngIf="errorMessage.length > 0" class="text-danger">
+                    {{errorMessage}}</p>
+                
+                <p *ngIf="error.message.length > 0" class="text-danger">
+                    {{error.message}} </p>
+
+                    <p *ngIf="message.length > 0" class="text-info">
+                        {{message}} </p>
+            </div>
+        </div>
+
+    </div>
+</div>

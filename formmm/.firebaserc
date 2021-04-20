@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "jerry-dda48"
+  },
+  "targets": {
+    "jerry-dda48": {
+      "hosting": {
+        "form": [
+          "jerry-dda48"
+        ]
+      }
+    }
+  }
+}
